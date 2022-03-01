@@ -4,10 +4,10 @@ listener http:Listener httpListener = new (8080);
 
 service / on httpListener {
     resource function get greeting() returns string { 
-        return "Hello, World! - Tony McClay added from winLinux"; 
+        return "Hello, World! - Tony McClay added from winLinux" + "\n"; 
     }
 
     resource function get greeting/[string name]() returns string { 
-        return "Hello Theze nutz Wartburg " + name; 
+        return "Hello Theze nutz Wartburg name =  " + name + "\n"; 
     }
 }
